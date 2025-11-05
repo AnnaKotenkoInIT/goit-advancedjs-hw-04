@@ -48,11 +48,17 @@ async function handleSubmit(event) {
         message: 'Sorry, there are no images matching your search query. Please try again!',
       });
       refs.loader.classList.add('hidden');
+      refs.button.classList.add('hidden');
       return;
     } else {
       await createImages(data);
       refs.loader.classList.add('hidden');
-      refs.button.classList.remove('hidden');
+      if (data.totalHits <= per_page) {
+        refs.button.classList.add('hidden');
+        refs.message.classList.add('show-text');
+      } else {
+        refs.button.classList.remove('hidden');
+      }
     }
   } catch (error) {
     iziToast.error({
