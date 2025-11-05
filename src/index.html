@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="img/gallery.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="form-container">
+        <form class="form">
+          <label for="form-search">
+            <input type="text" class="form-input" name="form-search" id="form-search" placeholder="Search images..." />
+          </label>
+          <button type="submit" class="form-button">Search</button>
+        </form>
+        <span class="hidden loader"></span>
+        <ul class="gallery"></ul>
+        <button class="load-button hidden">Load more</button>
+        <p class="hidden bottom"></p>
+      </div>
+    </section>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
